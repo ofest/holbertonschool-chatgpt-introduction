@@ -5,12 +5,9 @@ def factorial(n):
     result = 1
     while n > 1:
         result *= n
-        n -= 1   # decrease n each step
+        n -= 1   # decrement n so the loop terminates
     return result
 
-if len(sys.argv) > 1:
+if __name__ == "__main__":
     f = factorial(int(sys.argv[1]))
     print(f)
-else:
-    print("Usage: ./factorial.py <number>")
-    
